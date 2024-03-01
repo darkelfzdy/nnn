@@ -18,3 +18,8 @@ jobs:
       - name: Build with make
         run: |
           sudo make strip install
+      - name: Upload built executable
+        uses: actions/upload-artifact@v3
+        with:
+          name: nnn-executable
+          path: /usr/local/bin/nnn
