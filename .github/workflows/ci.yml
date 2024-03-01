@@ -9,12 +9,15 @@ on:
 jobs:
   build-on-ubuntu:
     runs-on: ubuntu-latest
+    container:
+      image: docker://multiarch/ubuntu-core:arm64-bionic
+      options: --privileged
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pkg-config libncursesw5-dev libreadline-dev
+          sudo apt-get install -y pkg-config libncursesw5-dev libreadline-dev qemu-user-static
       - name: Build with make
         run: |
           sudo make strip install
