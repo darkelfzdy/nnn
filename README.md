@@ -100,7 +100,7 @@ Runs on the Pi, [Termux](https://www.youtube.com/embed/AbaauM7gUJw) (Android), L
   - Access context paths/files at prompt or spawned shell
   - Lock terminal after configurable idle timeout
   - Capture and show output of a program in help screen
-  - Basic support for screen readers and braille displays
+  - Basic support for screen readers and braille displays ceshiyixai 
 
 ## Quickstart
 
